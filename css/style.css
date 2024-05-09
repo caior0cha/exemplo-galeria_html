@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: rgb(8, 2, 29);
+
+}
+
+img {
+    display: block;
+    max-width: 100%;    
+}
+
+.container {
+    max-width: 960px;
+    margin-inline: auto;
+    padding: 100px 20px;
+}
+
+/* Classe title = Estiliza os textos (h2) */
+
+.title {
+    margin-bottom: 50px;
+}
+
+.title span {
+    display: block;
+    color: #fff;
+}
+
+.title .primary {
+    font-size: 55px;
+    text-transform: uppercase;
+}
+
+.title .secondary {
+    font-size: 22px;
+}
+
+/* Estilo da Galeria */
+
+.gallery_wrapper {
+    display: flex;  
+}
+
+.gallery_item {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    padding: 25px;
+    height: 500px;
+    background-color: rgb(14, 2, 43);
+    overflow: hidden;
+    transition: flex 1.3s, opacity 0.25s;
+    
+}
+
+.gallery_item:hover {
+    opacity: 1;
+    
+}
+
+.gallery_item:not(:hover) {
+    opacity: 0.70;
+    flex: 5;
+}
+
+.image_item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image_item_description {
+    align-self: flex-end;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.name {
+    display: block;
+    background: linear-gradient(80deg,#936fe9,#3d1699);
+    padding-inline: 5px;
+    font-size: 25px;
+    transform: translateY(-10px);
+}
+
+.role {
+    display: block;
+    background: linear-gradient(80deg,#4034ee,#02034e);
+    padding: 3px;
+    transform: translateY(10px);
+}
+
+.name, .role {
+    opacity: 0;
+    transition: opacity 0.25s, transform 0.3s;
+    transition-delay: 0.3s;
+}
+
+.gallery_item:hover .name, .gallery_item:hover .role {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery_item:not(:hover) .name, .gallery_item:not(:hover) .role {
+    transition-delay: 0.05s;
+}
+
+.footer {
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+    padding-top: 150px;
+}
